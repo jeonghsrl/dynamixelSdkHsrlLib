@@ -1,0 +1,12 @@
+01_recognition: Dynamixelの認識
+01_recognition_func: Dynamixelの認識（関数） 
+02_setMode_func: 各種ドライブモードの設定（速度、加速度等の初期パラメータ引数込み）
+03_syncReadWrite_func: present positionを読み込み、goal positionで角度制御（複数連続sync）。pulse to angle関数追加
+04_bultReadWrite_func: -present position, velocity, currentの不連続アドレスのデータを読み書き。
+05_timeBasedProfile_func: - time_based profileの設定. position関係のmodeで使える。
+                          - 1: time_based profile   0: velocity_profile
+                          -  time_based profile設定では、position modeのvelocity_profileの数値が実行時間となる。
+06_reverseMode_func:  - 回転方向の設定
+                      - CCW(0): モータを見て反時計方向を＋、CW(1)：モータを見て時計方向を+
+07_homingOffsetReadWrite_func: - 現在位置をoffsetする。present_position = homingOffset 0の時のpresent_position + homingOffset 
+08_timerloop: 一定時間間隔のTimerloopの中でsyncwriteでモータ制御.
